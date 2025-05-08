@@ -8,10 +8,23 @@ def dt_extract(
     attr: str,
     new_col: str
 ) -> pd.DataFrame: 
-    # """
-    # 데이터프레임의 특정 컬럼을 datetime 타입으로 변환 후 연도, 월, 일 데이터를 추출해 새로운 컬럼을 만드는 함수
-    # col: datetime으로 변환할 컬럼 / attr: dt에서 추출할 데이터 / new_col: 생성할 컬럼 이름 
-    # """
+    """
+    Parameters
+    ----------
+    df : pd.DataFrame
+        The input DataFrame containing the original column.
+    col : str
+        The name of the column to convert to datetime format.
+    attr : str
+        The datetime attribute to extract (e.g., 'year', 'month', 'day', 'weekday').
+    new_col : str
+        The name of the new column to store the extracted attribute values.
+    
+    Returns
+    -------
+    pd.DataFrame
+        A new DataFrame (copy) with the specified column converted and the new column added.
+    """
     df = df.copy()
     df[col] = pd.to_datetime(df[col])
     df[new_col] = getattr(df[col].dt, attr) # getattr(object, name[, default]) - 객체의 프로퍼티에 동적 접근 가능 / dt의 year, month, day 등 여러 프로퍼티에 필요에 따라 동적으로 접근해야함.
@@ -28,10 +41,23 @@ def group_agg(
     agg_dict: Dict[str, Union[str, List[str]]], # dictionary 키 밸류 값 구분에 :가 아니라 , 사용
     reset_index: bool = False
 ) -> pd.DataFrame:
-    # """
-    # 그룹화 및 다중 프로퍼티에 대한 연산을 실행하는 함수.
-    # by: 그룹화할 컬럼 / agg_dict: key - 연산할 컬럼, value - 컬럼에 진행할 연산방식 / reset_index: True/False로 작동
-    # """
+    """
+    Parameters
+    ----------
+    df : pd.DataFrame
+        The input DataFrame to group and aggregate.
+    by : Union[str, List[str]]
+        Column name or list of column names to group by.
+    agg_dict : Dict[str, Union[str, List[str]]]
+        A dictionary mapping target column names to aggregation functions or lists of functions.
+    reset_index : bool, optional
+        If True, reset the index of the aggregated DataFrame (default is False).
+        
+    Returns
+    -------
+    pd.DataFrame
+        The aggregated DataFrame, with index reset if requested.
+    """
     result = df.groupby(by).agg(agg_dict)
     if reset_index:
         result = result.reset_index()
