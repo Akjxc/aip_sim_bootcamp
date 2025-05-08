@@ -24,7 +24,7 @@
 
 ---
 
-## Phase 1: Python & Pandas 복습 (1주)
+## Phase 1: Python & Pandas 복습 (1주) - (완료)
 
 - **목표**: 데이터 전처리 감각 회복
 - **활동**
@@ -36,11 +36,11 @@
 
 ---
 
-## Phase 1.5: 데이터 시각화 퀵패스 (2~3일)
+## Phase 1.5: 데이터 시각화 퀵패스 (2~3일) - (진행중)
 
 - **목표**: 시각화의 쓰임새 체감
 - **활동**
-    - Kaggle Data Visualization mini course 실습
+    - Kaggle Data Visualization mini course 실습 - (완료)
     - Titanic 등으로 질문형 분석 후 시각화
 - **성과물**
     - 시각화 예제 5개 + 한줄 해석
