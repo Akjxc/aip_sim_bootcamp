@@ -11,9 +11,9 @@
 	- sns.swarmplot - 범주형 변수로 그룹을 나눠 연속형 변수를 산점도로 나타냄. 연속형 변수와 범주형 변수 간의 관계 파악에 유리
 
 3. Distribution
-  - sns.histplot : 히스토그램으로 단일 숫자 변수의 분포 나타냄
-  - sns.kdeplot - KDE 플롯으로 숫자 변수의 곡선 분포를 나타냄. 2D KDE 플롯(sns.jointflot(x=.., y=.., kind='kde'))은 두 KDE 플롯을 결합하여 곡선 분포 나타냄. 관계적?  
-  - Relationship Group과 마찬가지로 hue를 통해 다른 색상으로 그룹 나누기 가능
+	- sns.histplot : 히스토그램으로 단일 숫자 변수의 분포 나타냄
+	- sns.kdeplot - KDE 플롯으로 숫자 변수의 곡선 분포를 나타냄. 2D KDE 플롯(sns.jointflot(x=.., y=.., kind='kde'))은 두 KDE 플롯을 결합하여 곡선 분포 나타냄. 관계적?
+	- Relationship Group과 마찬가지로 hue를 통해 다른 색상으로 그룹 나누기 가능
 
 --- 
 ## [25.05.09 (2 / 2] Phase 1.5 - 진행 중 학습 과정 추가
