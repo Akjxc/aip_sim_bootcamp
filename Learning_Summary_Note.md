@@ -46,7 +46,7 @@
 	- 상기하였듯, boxplot의 수염(whisper)의 범위, 즉 IQR * 1.5 혹은 튜플로 지정한 범위를 벗어나는 값.
 
 ---
-## [25.05.13 (1 / 2)] Phase 1.5 - skew, countplot
+## [25.05.13 (2 / 2)] Phase 1.5 - skew, countplot
 - https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.skew.html
 - https://mizykk.tistory.com/73 (왜도 시각자료)
 1. Skew(왜도, skewness)
