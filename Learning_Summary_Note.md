@@ -27,7 +27,7 @@
 ---
 ## [25.05.13 (1 / 2)] Phase 1.5 - boxplot, outlier
 - https://seaborn.pydata.org/generated/seaborn.boxplot.html
-# sns.boxplot(data=.., x=.., y=.., whis=(low, high))
+1. sns.boxplot(data=.., x=.., y=.., whis=(low, high))
 - whis : 박스플롯의 수염(whisper) 범위 지정. 수염은 정상치로 포함할 범위를 지정하는 역할, 그 수염을 벗어나면 이상치(outlier)로 탐지.
 	- 기본값 : IQR * 1.5 범위 내. / 위쪽 수염(end of upper whisker): Q3 + 1.5 × IQR 범위 안에 있는 가장 큰 관측치. 아래쪽 수염(end of lower whisker): Q1 – 1.5 × IQR 범위 안에 있는 가장 작은 관측치
    	- 튜플(low, high) 사용시 : 각각 하위, 상위 백분위수(percentile) 지점으로 해석. ex) whis=(5, 95) : 박스의 수염이 5퍼센타일부터 95퍼센타일  
@@ -42,14 +42,14 @@
 - notch - 박스 모서리에 중앙값의 신뢰구간(notch)을 표시, 그룹간 중앙값 차이가 통계적으로 의미있는지 감각적으로 파악
 - showcaps=False - 수염 끝의 캡을 숨겨 시각적 잡음 X
 
-# Outlier(이상치, seaborn에서는 flier)
+2. Outlier(이상치, seaborn에서는 flier)
 - 상기하였듯, boxplot의 수염(whisper)의 범위, 즉 IQR * 1.5 혹은 튜플로 지정한 범위를 벗어나는 값.
 
 ---
 ## [25.05.13 (1 / 2)] Phase 1.5 - skew, countplot
 - https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.skew.html
 - https://mizykk.tistory.com/73 (왜도 시각자료)
-# Skew(왜도, skewness)
+1. Skew(왜도, skewness)
 - "For normally distributed data, the skewness should be about zero." - 정규 분포를 따르는 데이터의 경우 왜도는 약 0이어야 한다.
 - 분포의 평균을 중심으로 꼬리가 어느 쪽으로 얼마나 길게 늘어나는지에 대한 값.
 - 정규 분포(대칭) - skew = 0 / skew 값이 0에 가까워질수록 정규 분포에 가까워짐. (정규분포를 가정하는 머신러닝 알고리즘은 분포가 심하게 치우치면 예측 정확도 떨어짐, 따라서 0에 가까워지도록 조정해야함. 조정은 Phase 2에서) 
@@ -57,7 +57,7 @@
 - Negative Skew(음 왜도) - skew < 0 : 대부분의 관측치가 오른쪽으로 치우침(밀집), 왼쪽 꼬리가 길어 평균 < 중앙값 (ex 데이터: [−100, 1, 2, 2, 3, 4])
 
 https://seaborn.pydata.org/generated/seaborn.countplot.html
-# sns.countplot(data=.., x=..(or y=), hue=.., stat=..)
+2. sns.countplot(data=.., x=..(or y=), hue=.., stat=..)
 - 범주형 변수의 관측치 빈도 분포를 막대 차트 형태로 보여줌, 히스토그램을 범주형 변수에 적용한 개념
 - x(or y) : 주축에 쓸 범주형 변수, x와 y중 한가지만 선택. 선택에 따라 방향만 바뀜
 - hue : 그룹화할 변수
