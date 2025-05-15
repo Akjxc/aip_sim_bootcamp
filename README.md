@@ -65,9 +65,16 @@
 - **목표**: ML 모델링 흐름 이해 및 기본적인 파이프라인 코드 구현 능력 습득, 다음 단계 연동 준비
 - **활동**
     - [핵심 필수 학습 내용] (Phase 1/1.5에서 다진 기본기 바탕으로 진행)
-        1. ML 모델 입력을 위한 필수 전처리 심화 학습 및 실습: 수치형 데이터 스케일링(StandardScaler, MinMaxScaler 등), 범주형 데이터 인코딩(One-Hot Encoding 등) 심화, 간단한 Text Preprocessing 기본(불용어 제거 등), 이상치 처리 기본(제거, 대체 등) 등 Scikit-learn의 Transformer 활용
-        2. 기본 ML 모델 학습 및 실습: Scikit-learn을 활용하여 기본적인 분류 모델(Logistic Regression) 및 회귀 모델(Linear Regression) 학습 및 예측 실습
-        3. ML 파이프라인 구현 필수 기술 학습 및 실습: Scikit-learn의 `Pipeline` 및 `ColumnTransformer` 활용법 학습 및 실습
+        1. ML 모델 입력을 위한 필수 전처리 심화 학습 및 실습
+            - 수치형 데이터 스케일링 : Normalization/Standardization 개념 및 Scikit-learn Transformer 활용법, StandardScaler, MinMaxScaler 등
+            - 범주형 데이터 인코딩 방법 심화 : One-Hot Encoding, Label Encoding 개념 및 Scikit-learn Transformer 활용법, 특히 ColumnTransformer와 연동
+            - (선택 데이터셋에 텍스트 특성이 있다면) 텍스트 데이터 전처리 기본 : 토큰화, 벡터화 개념 및 간단한 구현, 불용어 제거 등
+            - 이상치 처리 기본 : IQR, Z-score, SimpleImputer 등 활용한 구체적인 처리 방법(제거, 대체 등)
+        2. 기본 ML 모델 학습 및 실습
+            - 분류 문제 모델: 로지스틱 회귀 (Logistic Regression) 학습 및 실습
+            - 회귀 문제 모델: 선형 회귀 (Linear Regression) 학습 및 실습
+        3. ML 파이프라인 구현 필수 기술 학습 및 실습: 
+            - Scikit-learn의 `Pipeline` 및 `ColumnTransformer` 활용법 학습 및 실습 (전처리 단계와 모델 학습 단계를 하나로 묶는 코드 구현)
             - **[추가 가이드]** 복잡한 전체 파이프라인을 만들기 전에, 2-3개의 간단한 전처리 단계(예: 특정 컬럼 스케일링 + 다른 컬럼 인코딩)만 `ColumnTransformer`와 `Pipeline`으로 묶어보고 데이터 변환 결과를 확인하는 '미니 실습'을 먼저 수행하는 것을 권장합니다.
         4. ML 모델 평가 필수 지식 학습: ML 모델 평가 지표의 종류 및 선택 기준 학습 (분류: Accuracy, Precision, Recall, F1, ROC AUC 등 / 회귀: MSE, RMSE, R2 등)
         5. **ML 모델 평가 지표 계산 방법 학습 및 실습:** Scikit-learn의 `metrics` 모듈 등 라이브러리를 활용하여 실제 모델 예측 결과(`y_pred`)와 실제 값(`y_true`)을 기반으로 평가 지표 값을 코드로 계산하는 구체적인 방법 학습 및 실습. **분류 모델의 경우 평균 정확도 외에 정밀도(Precision), 재현율(Recall), F1-score, 그리고 혼동 행렬(Confusion Matrix) 등 다른 핵심 평가 지표들도 함께 계산하고 해석하는 방법 학습 및 실습을 포함합니다.**
