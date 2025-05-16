@@ -1,4 +1,5 @@
 [25.05.15 (1 / 2)] Phase 2 - ML Workflow
+- https://www.kaggle.com/learn/intro-to-machine-learning
 1. 데이터 준비/전처리(결측치 처리 등)
 2. 예측 대상(Prediction Target) 선택
   - 관례적으로 y 변수에 저장
@@ -47,14 +48,6 @@
       d. 자식 노드마다 이 과정을 재귀적으로 반복
       e. 설정된 조건(max_depth, min_samples_leaf 등)에 도달하면 리프 노드로 종료
     3) 내부적으로 사용하는 알고리즘: CART (Classification and Regression Tree)
-분할 기준:
-
-분류 문제: 지니 지수(Gini index), 엔트로피(Entropy)
-
-회귀 문제: 평균제곱오차(MSE)
-
-학습 중 내가 학습 알고리즘을 지정하지 않는 이유는?
-
-Scikit-learn에서는 결정트리 학습 알고리즘이 이미 내장되어 있고 고정(CART) 되어 있기 때문이야.
-
-즉, 너는 fit()만 호출하면 사전에 정해진 방식대로 학습이 자동으로 진행되는 구조야.
+      - Scikit-learn에서는 결정트리 학습 알고리즘이 이미 내장되어 있고 고정(CART) 되어 있음. 따라서 fit()만 호출하면 사전에 정해진 방식대로 학습이 자동으로 진행되는 구조.
+    4) 다른 모델들은 fit()할 때 임의적인 학습 방식을 지정할 수 있는가?
+      - LogisticRegression, SGDClassifier, KMeans, MLPClassifier(신경망) 등 학습 알고리즘, 학습률, 옵티마이저 등 각각 다양한 설정값 지정 가능. DecisionTreeClassifier, RandomForestClassifier는 학습 알고리즘 고정.
